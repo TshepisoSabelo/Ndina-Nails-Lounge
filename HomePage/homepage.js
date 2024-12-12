@@ -1,10 +1,10 @@
 //html elements for booking an appointment
 let btnOk = document.getElementById("okay");
-let inputName = docuemnt.getElementById("First");
-let inputSurname = docuemnt.getElementById("LastName");
-let inputEmail = docuemnt.getElementById("EmailAddress");
-let inputPhone = docuemnt.getElementById("PhoneNumber");
-let selectService = docuemnt.getElementById("Services");
+let inputName = document.getElementById("First");
+let inputSurname = document.getElementById("LastName");
+let inputEmail = document.getElementById("EmailAddress");
+let inputPhone = document.getElementById("PhoneNumber");
+let selectService = document.getElementById("Services");
 let selectDate = document.getElementById("date");
 let Alertmsg = document.getElementById("alerttittle");
 let Alertbox = document.querySelector(".bookingalert");
@@ -30,9 +30,9 @@ class Customer{
     };
 
     generateReference(){
-        reference = [];
-        intLength = this._alphaNumeric.length;
-        for(i = 0; i<10; i++)
+        let reference = [];
+        let intLength = (Customer._alphaNumeric).length;
+        for(let i = 0; i<10; i++)
         {
             reference[i] = Customer._alphaNumeric[Math.floor(Math.random()*intLength)];
         }
@@ -53,6 +53,7 @@ function sendBooking()
         }
     );
 
+    console.log(counter);
     eBody.style.overflow = 'hidden';
 
     if(counter>0)
@@ -60,10 +61,10 @@ function sendBooking()
         Alertbox.style.display = 'flex';
         Alertmsg.textContent = "Please fill in all field";
     }
-    else if(counter === 0)
+    else
     {
         const newCustomer = new Customer(inputName.value, inputSurname.value, inputEmail.value,  inputPhone.value, selectService.value, selectDate.value)
-        const ReferenceNum = newCustomer.generateReference();
+        let ReferenceNum = newCustomer.generateReference();
         Alertbox.style.display = 'flex';
         refNum.textContent = ReferenceNum;
         Alertmsg.textContent = "Thank you for booking an Appointment with us. Your booking number is: ";

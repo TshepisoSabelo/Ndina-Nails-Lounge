@@ -7,10 +7,14 @@ let inputPhone = document.getElementById("PhoneNumber");
 let selectService = document.getElementById("Services");
 let selectDate = document.getElementById("date");
 let Alertmsg = document.getElementById("alerttittle");
+let Alertmsg2 = document.getElementById("alerttittle2");
 let Alertbox = document.querySelector(".bookingalert");
 let refNum = document.getElementById('refNum');
 let eBody = document.body;
+
+
 let bookings = [];
+let inputs = [inputName, inputSurname, inputEmail,  inputPhone, selectService, selectDate];
 
 class Customer{
     #_name;
@@ -18,7 +22,7 @@ class Customer{
     #_emailAddress;
     #_service;
     #_date;
-    static _alphaNumeric = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    static _alphaNumeric = '0123456789';
 
     constructor(name,surname, emailaddress, servicetype, date)
     {
@@ -36,14 +40,13 @@ class Customer{
         {
             reference[i] = Customer._alphaNumeric[Math.floor(Math.random()*intLength)];
         }
-        return reference.join(''); //Join the reference array into a string and return it
+        return 'N'+reference.join(''); //Join the reference array into a string and return it
     };
 };
 
 function sendBooking()
 {
     let counter = 0;
-    const inputs = [inputName, inputSurname, inputEmail,  inputPhone, selectService, selectDate];
     inputs.forEach(element =>  
         {
             if (element.value === '')
@@ -59,7 +62,9 @@ function sendBooking()
     if(counter>0)
     {
         Alertbox.style.display = 'flex';
-        Alertmsg.textContent = "Please fill in all field";
+        Alertmsg.textContent = '';
+        refNum.textContent = '';
+        Alertmsg2.textContent = "Please fill in all fields";
     }
     else
     {
@@ -67,12 +72,20 @@ function sendBooking()
         let ReferenceNum = newCustomer.generateReference();
         Alertbox.style.display = 'flex';
         refNum.textContent = ReferenceNum;
-        Alertmsg.textContent = "Thank you for booking an Appointment with us. Your booking number is: ";
+        Alertmsg.textContent = "Your booking was successful."; 
+        Alertmsg2.textContent= "Your reference number is: ";
         bookings.push(newCustomer);
     };
 };
 
 function dismissAlert(){
+    //remove all fields
+        inputs.forEach(element =>  
+        {
+            element.value = '';
+        }
+    );
     Alertbox.style.display = '';
     eBody.style.overflow = '';
+
 };

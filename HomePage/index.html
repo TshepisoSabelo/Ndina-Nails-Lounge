@@ -10,7 +10,7 @@
 <body>
     <header>
         <nav>
-            <a><img src ="RefinedLogo.png" ></a>
+            <a><img src ="../GlobalResources/RefinedLogo.png" ></a>
             <ul>
                 <li><a href = #Home>Home</a></li>
                 <li><a href = #About>About</a></li>
@@ -77,13 +77,14 @@
                 <input id = "PhoneNumber" placeholder="PhoneNumber"></br>
                 
                 <select id = "Services">
-                    <option placeholder = "Service">Select Service</option>
+                    <option placeholder = "Service" value = ''>Select Service</option>
                     <option value = "Menicure">Menicure</option>
                     <option value = "Pedicure">Pedicure</option>
+                    <option value = "BuffnShine">Buff and Shine</option>
                 </select>
                 
                 <select id = "date">
-                    <option placeholder = "Date">Select Date</option>
+                    <option placeholder = "Date" value = ''>Select Date</option>
                     <option value = "Thursday">Thursay</option>
                     <option value = "Friday">Friday</option>
                     <option value = "Sturday">Saturday</option>
@@ -92,10 +93,11 @@
         
                 <div class = "buttons">
                     <button class = "Submit" onclick="sendBooking()">Submit</button>
-                    <button class = "Cancel">Cancel</button>
+                    <button class = "Cancel" onclick="dismissAlert()">Cancel</button>
                 </div>
                 <div class = "bookingalert">
                     <h3 id = "alerttittle"></h3>
+                    <h3 id = "alerttittle2"></h3>
                     <h1 id = 'refNum'></h1>
                     <button id = "okay" onclick="dismissAlert()">Ok</button>
                 </div>

@@ -127,7 +127,7 @@ main .Section1 p
     margin-top: 100px;
     margin-left: 5%;
     margin-right: 5%;
-    animation: onScroll 1.5s forwards;
+    animation: onScroll 2s forwards 0.3;
 
 }
 main .Section1 div

@@ -5,7 +5,7 @@ Welcome to Ndina-Nails-Lounge, a modern and user-friendly website for managing a
 ## Website Overview
 The website consists of five main pages:
 
-## #Home Page:
+### Home Page:
 -Welcomes visitors to Ndina-Nails-Lounge.
 -Showcases featured services and promotions.
 

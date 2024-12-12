@@ -72,7 +72,7 @@
                 <h1><u>BOOK YOUR</br>
                       APPPOINTMENT</u></h1>
                 <input id = "First" placeholder="First Name">
-                <input id = "Last Name" placeholder="Last Name"></br>
+                <input id = "LastName" placeholder="Last Name"></br>
                 <input id = "EmailAddress" placeholder="Email Address">
                 <input id = "PhoneNumber" placeholder="PhoneNumber"></br>
                 
@@ -91,10 +91,14 @@
                 </select>
         
                 <div class = "buttons">
-                    <button class = "Submit">Submit</button>
+                    <button class = "Submit" onclick="sendBooking()">Submit</button>
                     <button class = "Cancel">Cancel</button>
                 </div>
-            </div>
+                <div class = "bookingalert">
+                    <h3 id = "alerttittle"></h3>
+                    <h1 id = 'refNum'></h1>
+                    <button id = "okay" onclick="dismissAlert()">Ok</button>
+                </div>
         </section>
         <section class = "Developer">
             <p>Designed and Developed by</p>
@@ -107,5 +111,6 @@
             </ul>
         </section>
     </main>
+    <script src="/Ndina-Nails-Lounge/HomePage/homepage.js"></script>
 </body>
 </html>

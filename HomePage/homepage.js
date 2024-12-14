@@ -11,7 +11,7 @@ let Alertmsg2 = document.getElementById("alerttittle2");
 let Alertbox = document.querySelector(".bookingalert");
 let refNum = document.getElementById('refNum');
 let eBody = document.body;
-
+import { CustomerInfo } from "/Ndina-Nails-Lounge/AboutPage/AboutPage.js";
 
 let bookings = [];
 let inputs = [inputName, inputSurname, inputEmail,  inputPhone, selectService, selectDate];

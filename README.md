@@ -38,7 +38,7 @@ The website consists of five main pages:
 
 ### Future Features for Admin Side
 -AI-Based Booking Management:
--Implement an AI system to automatically handle booking acceptances based on predefined rules and supplied documentation.
+-Implement an AI system to handle booking acceptances automatically based on predefined rules and supplied documentation.
 -Help manage bookings efficiently when the admin is busy.
 
 ### Business Statistics:

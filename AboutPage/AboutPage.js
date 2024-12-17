@@ -7,3 +7,4 @@ let bookedDay = document.getElementById('bookedDay');
 
 let CustomerInfo = [CustomerName, CustomerSurname, CustomerPhone, CustomerEmail, BookedService, bookedDay];
 export default CustomerInfo;
+//Make export 

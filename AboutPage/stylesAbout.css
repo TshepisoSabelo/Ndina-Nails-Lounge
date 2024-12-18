@@ -1,0 +1,91 @@
+Header
+{
+    width: 100vw;
+    background-color: white;
+    height: inherit;
+    padding-right: 10%;
+    padding-top: 2px;
+    position: fixed;
+    top: 0px;
+}
+
+Header nav
+{
+    display: grid;
+    grid-auto-flow: column;
+}
+
+Header nav a
+{
+    height: fit-content;
+}
+
+Header nav a img
+{
+    margin-top: 0;
+    padding-left:0% 5%;
+    height: 50%;
+    width: 20%;
+}
+
+Header nav ul
+{
+    display: flex;
+    justify-content: flex-end;
+    height: inherit;
+}
+
+Header nav ul li
+{
+    background-color: white;
+    display: inline;
+    height: fit-content;
+    margin: auto auto;
+}
+
+Header nav ul li a
+{
+    text-decoration: 0;
+    color: black;
+    font-family: sans-serif;
+    padding-top: 25px;
+    transition: o.5s ease;
+    cursor: pointer;
+}
+
+Header nav a button
+{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    margin: auto auto;
+}
+
+Header nav ul li a:hover{
+    border-bottom: solid 3px pink;
+    transform: scale(1.05);
+}
+
+button
+{
+    background-color: rgb(65, 63, 63);
+    color: whitesmoke;
+    width: 120px;
+    height:40px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    animation: onScroll 1.5s backwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+
+button:hover
+{
+    transform: scale(1.03);
+    background-color: pink;
+    border-color: pink;
+}

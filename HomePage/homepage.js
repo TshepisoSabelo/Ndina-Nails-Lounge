@@ -1,11 +1,11 @@
 //html elements for booking an appointment
-let btnOk = document.getElementById("okay");
 let inputName = document.getElementById("First");
 let inputSurname = document.getElementById("LastName");
 let inputEmail = document.getElementById("EmailAddress");
 let inputPhone = document.getElementById("PhoneNumber");
 let selectService = document.getElementById("Services");
 let selectDate = document.getElementById("date");
+let Alertcover = document.getElementById("cover");
 let Alertmsg = document.getElementById("alerttittle");
 let Alertmsg2 = document.getElementById("alerttittle2");
 let Alertbox = document.querySelector(".bookingalert");
@@ -61,6 +61,7 @@ function sendBooking()
 
     if(counter>0)
     {
+        Alertcover.style.display = 'flex';
         Alertbox.style.display = 'flex';
         Alertmsg.textContent = '';
         refNum.textContent = '';
@@ -70,6 +71,7 @@ function sendBooking()
     {
         const newCustomer = new Customer(inputName.value, inputSurname.value, inputEmail.value,  inputPhone.value, selectService.value, selectDate.value)
         let ReferenceNum = newCustomer.generateReference();
+        Alertcover.style.display = 'flex';
         Alertbox.style.display = 'flex';
         refNum.textContent = ReferenceNum;
         Alertmsg.textContent = "Your booking was successful."; 
@@ -85,6 +87,7 @@ function dismissAlert(){
             element.value = '';
         }
     );
+    Alertcover.style.display = '';
     Alertbox.style.display = '';
     eBody.style.overflow = '';
 

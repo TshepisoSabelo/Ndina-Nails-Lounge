@@ -1,0 +1,22 @@
+#A blueprint that defines multiple containers (services) and how they work together.
+version: '3.9'
+
+services:
+  db:
+    image: mysql:8
+    container_name: mysql_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: PC-MySQL_PassPass02
+      MYSQL_DATABASE: nailsbar_db
+    ports:
+      - "3306:3306"
+
+  api:
+    build: . #build docker image from dockerfile in the curent fold
+    containe_name: fastapi_app
+    depends_on:
+      - nailsbar_db
+    ports:
+      - "8000:8000"
+      

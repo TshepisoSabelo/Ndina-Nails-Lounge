@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NdinaeNailsBar</title>
+    <link rel = "Stylesheet" href = "../styles/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <nav class = 'nav-bar'>
+            <a><img src ="../GlobalResources/RefinedLogo.png" ></a>
+            <ul>
+                <li><a href = "index.html">Home</a></li>
+                <li><a href = "prices.html">Prices</a></li>
+                <li><a href = "Contact.html">Contact</a></li>
+                <li><button class = 'btn btn_more-info' id = "#BookNow" href = #Book>Book Now</button></li>
+            </ul>
+            <div class = 'btn btn-menu'><i class='bx  bx-menu'></i></div>
+        </nav>
+    </header>
+    <main>
+        <section class = "hero main-hero" id = "Home">
+            <h1>Get that beauty</br>
+            feeling</h1>
+            <div class = 'btn btn_more-info'><button>Find Out More</button></div>
+        </section>
+
+        <section class="specials-section">
+            <div class="container">
+                <h2>Specials & Discounts</h2>
+                <div class="slider">
+                <button class="slider-btn prev">&#10094;</button>
+                <div class="slides">
+                    <div class="slide">
+                    <img src="images/mani-discount.jpg" alt="Manicure Special">
+                    <div class="slide-info">
+                        <h3>50% Off Manicure</h3>
+                        <p>Get a perfect manicure at half price this week!</p>
+                    </div>
+                    </div>
+                    <div class="slide">
+                    <img src="images/pedi-special.jpg" alt="Pedicure Special">
+                    <div class="slide-info">
+                        <h3>Free Pedicure Upgrade</h3>
+                        <p>Book a pedicure and enjoy a free nail art design.</p>
+                    </div>
+                    </div>
+                    <div class="slide">
+                    <img src="images/nail-art.jpg" alt="Nail Art Special">
+                    <div class="slide-info">
+                        <h3>Buy 2 Get 1 Nail Art Free</h3>
+                        <p>Add flair to your nails with this limited-time offer!</p>
+                    </div>
+                    </div>
+                </div>
+                <button class="slider-btn next">&#10095;</button>
+                </div>
+            </div>
+            </section>
+
+        <Section class = "container services">
+            <div class = 'service' id = 'manicure'>
+                <span>
+                    <div class = 'Info'>
+                        <p class = 'price'>From R150.00</p>
+                        <h2 class = 'service-name'>ACRYLICS</h2>
+                        <p class = 'service-description'>Plain Set</br>
+                            French Design</br>
+                            Ombre
+                        </p>
+                        <button class = 'btn btn_more-info'>Find Out More</button>
+                    </div>
+                </span>
+            </div>
+
+            <div class = 'service' id = 'pedicure'>
+                <div class = 'Info'>
+                    <p class = 'price'>From R120.00</p>
+                    <h2 class = 'service-name'>PEDICURE</h2>
+                    <p class = 'service-description'>Plain Pedicure</br>
+                        French Pedicure</br>
+                    </p>
+                    <button class = 'btn btn_more-info'>Find Out More</button>
+                </div>    
+            </div>
+
+            <div class = 'service' id = 'buff-and-shine'>
+                <span>
+                    <div class = 'Info'>
+                        <p class = 'price'>From R100.00</p>
+                        <h2 class = 'service-name'>BUFF&SHINE</h2>
+                        <p class = 'service-description'>Plain Buff and Shine</br>
+                            Custom Designs</br>
+                            Custom Icons</p>
+                        </p>
+                        <button class = 'btn btn_more-info'>Find Out More</button>
+                    </div>
+                </span>
+            </div>
+        </Section>
+        <section class = "About">
+
+        </section>
+        
+        <section class="booking-section">
+            <h2>Book an Appointment</h2>
+
+            <form class="booking-form">
+                
+                <div class="form-group">
+                <input type="text" placeholder="Name" required>
+                <input type="text" placeholder="Surname" required>
+                </div>
+
+                <div class="form-group">
+                <input type="email" placeholder="Email Address" required>
+                <input type="tel" placeholder="Phone Number" required>
+                </div>
+
+                <div class="form-group">
+                <select required>
+                    <option value="">Select Service</option>
+                    <option value="manicure">Manicure</option>
+                    <option value="pedicure">Pedicure</option>
+                    <option value="buff-shine">Buff & Shine</option>
+                </select>
+                </div>
+
+                <div class="form-group">
+                <input type="date" required>
+                <input type="time" required>
+                </div>
+
+                <button type = "submit" class="btn btn-submit">Submit</button>
+
+            </form>
+        </section>
+
+<section class="reviews">
+    <h1>Testimonials and Reviews</h1>
+    <p id = "view-all">View All</p>
+    <div class="container reviews-container">
+
+        <div class="review">
+            <h2><i class='bx bx-user'></i> Sara Lekwane</h2>
+            <div class="stars">
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bx-star'></i>
+            </div>
+            <p>I loved the service. It was quick, professional, and my nails looked amazing.</p>
+        </div>
+
+        <div class="review">
+            <h2><i class='bx bx-user'></i> Thato Mokoena</h2>
+                        <div class="stars">
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bx-star'></i>
+            </div>
+            <p>Very friendly staff and a relaxing environment. I will definitely come back.</p>
+        </div>
+
+        <div class="review">
+            <h2><i class='bx bx-user'></i> Lerato Khumalo</h2>
+            <div class="stars">
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+            </div>
+            <p>My pedicure was neat and long-lasting. Great attention to detail.</p>
+        </div>
+
+    </div>
+</section>
+
+        <section class = "footer">
+            <p>Designed and Developed by</p>
+            <p>KMART GRAPHICS SOLUTIONS</p>
+            <ul>
+                <li><i class='bx bxl-facebook-square'></i></li>
+                <li><i class='bx bxl-instagram' href = "https://www.instagram.com/kmart.zip/profilecard/?igsh=MWF6ZGJzczNwdWtyOA%3D%3D"></i></li>
+                <li><i class='bx bxl-linkedin'></i></li>
+                <li><i class='bx bxl-whatsapp'></i></li>
+            </ul>
+        </section>
+    </main>
+    <div class = "cover">
+        <div class = "bookingalert">
+            <h3 id = "alerttittle"></h3>
+            <h3 id = "alerttittle2"></h3>
+            <h1 id = 'refNum'></h1>
+            <button id = "okay" onclick="dismissAlert()">Hi Hello</button>
+        </div>
+    </div>
+    <script src="../javascript/homepage.js"></script>
+</body>
+</html>

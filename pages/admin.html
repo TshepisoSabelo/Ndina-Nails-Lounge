@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "Stylesheet" href = "../styles/admin.css">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <section class = "side-bar">
+
+        <h1><i class='bx bx-user'></i>Admin</h1>
+        <p>Username</p>
+
+        <ul class="navbar">
+            <li><i class='bx bx-grid-alt'></i> <span>Dashboard</span></li>
+            <li><i class='bx bx-time-five'></i> <span>Availability</span></li>
+            <li><i class='bx bx-calendar'></i> <span>Appointments</span></li>
+            <li><i class='bx bx-line-chart'></i> <span>Analytics</span></li>
+            <li><i class='bx bx-cog'></i> <span>Settings</span></li>
+        </ul>
+
+        <a><img class = logo src ="../GlobalResources/RefinedLogo.png" ></a>
+    </section>
+
+    <section class = "container main-content">
+        <div class = "menu-option dashboard"> 
+            <h2>Dashboard</h2>
+            <!-- Admin Profile -->
+            <div class="dashboard-card profile-card">
+                <img src="https://via.placeholder.com/120" alt="Admin Profile" class="profile-img">
+
+                <div class="profile-info">
+                    <h3>Admin Profile</h3>
+                    <p><strong>Name:</strong> Sarah Naidoo</p>
+                    <p><strong>Email:</strong> sarah.naidoo@example.com</p>
+                    <p><strong>Phone:</strong> 072 555 8899</p>
+                    <p><strong>Role:</strong> Super Admin</p>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-grid">
+                <div class="dashboard-card stat-card completed">
+                    <h4>Completed Jobs</h4>
+                    <span id="completedJobs">48</span>
+                </div>
+
+                <div class="dashboard-card stat-card pending">
+                    <h4>Pending Jobs</h4>
+                    <span id="pendingJobs">7</span>
+                </div>
+
+                <div class="dashboard-card stat-card revenue">
+                    <h4>Total Revenue</h4>
+                    <span>R 12,450</span>
+                </div>
+            </div>
+
+            <!-- Extra Analytics -->
+            <div class="dashboard-card analytics-card">
+                <h3>Quick Analytics</h3>
+
+                <ul>
+                    <li>📅 Appointments Today: <strong>6</strong></li>
+                    <li>💅 Most Booked Service: <strong>Pedicure</strong></li>
+                    <li>👩‍🔧 Top Technician: <strong>Lerato</strong></li>
+                    <li>⭐ Customer Satisfaction: <strong>4.8 / 5</strong></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class = "menu-option availability"> 
+            <h2>Admin Availability Timeslots</h2>
+
+            <table>
+                <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                    <th>Sunday</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>09:00 - 10:00</td>
+                    <td class="available"></td>
+                    <td class="available"></td>
+                    <td class="available"></td>
+                    <td class="unavailable"></td>
+                    <td class="available"></td>
+                    <td class="unavailable"></td>
+                    <td class="available"></td>
+                </tr>
+                <tr>
+                    <td>10:00 - 11:00</td>
+                    <td class="available"></td>
+                    <td class="unavailable"></td>
+                    <td class="available"></td>
+                    <td class="available"></td>
+                    <td class="unavailable"></td>
+                    <td class="available"></td>
+                    <td class="available"></td>
+                </tr>
+                <tr>
+                    <td>11:00 - 12:00</td>
+                    <td class="unavailable"></td>
+                    <td class="available"></td>
+                    <td class="available"></td>
+                    <td class="available"></td>
+                    <td class="available"></td>
+                    <td class="unavailable"></td>
+                    <td class="available"></td>
+                </tr>
+                </tbody>
+            </table>
+
+            <div class="legend">
+                <div><span class="available"></span> Available</div>
+                <div><span class="unavailable"></span> Unavailable</div>
+                <div><span class="selected"></span> Selected</div>
+            </div>
+        </div>
+
+        <div class = "menu-option appointments">  
+            <h2>Apppointments</h2>
+
+            <table>
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Appointment</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Booking fee</th>
+                    <th>Assignd to</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Thandi Mokoena</td>
+                    <td>072 345 6789</td>
+                    <td>thandi.m@example.com</td>
+                    <td>Manicure</td>
+                    <td>2026-02-12</td>
+                    <td>10:00</td>
+                    <td>R250</td>
+                    <td>Nokuthula</td>
+                </tr>
+
+                <tr>
+                    <td>Sarah Jacobs</td>
+                    <td>083 987 4561</td>
+                    <td>sarah.j@example.com</td>
+                    <td>Pedicure</td>
+                    <td>2026-02-12</td>
+                    <td>11:30</td>
+                    <td>R350</td>
+                    <td>Lerato</td>
+                </tr>
+
+                <tr>
+                    <td>Nomvula Dlamini</td>
+                    <td>071 556 2248</td>
+                    <td>nomvula.d@example.com</td>
+                    <td>Buff and Shine</td>
+                    <td>2026-02-13</td>
+                    <td>09:00</td>
+                    <td>R180</td>
+                    <td>Ayanda</td>
+                </tr>
+
+                <tr>
+                    <td>Michelle Naidoo</td>
+                    <td>084 221 9987</td>
+                    <td>michelle.n@example.com</td>
+                    <td>Manicure</td>
+                    <td>2026-02-13</td>
+                    <td>14:00</td>
+                    <td>R250</td>
+                    <td>Nokuthula</td>
+                </tr>
+
+                <tr>
+                    <td>Zanele Khumalo</td>
+                    <td>079 443 1126</td>
+                    <td>zanele.k@example.com</td>
+                    <td>Pedicure</td>
+                    <td>2026-02-14</td>
+                    <td>08:00</td>
+                    <td>R250</td>
+                    <td>Nelisiwe</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class = "menu-option analytics"> 
+
+        </div>
+
+        <div class = "menu-option settings">
+            <h2>Admin Settings</h2>
+
+            <div class = "menu settings-menu">
+                <button class = "btn btn-profile">Profile</button>
+                <button class = "btn btn-systems">Systems</button>
+                <button class = "btn btn-security">Security</button>
+            </div>
+
+            <!-- Profile Settings -->
+            <div class="settings-card" id = "profileSettings">
+                <h3>Profile Settings</h3>
+
+                <label>
+                    Admin Name
+                    <input type="text" value="Admin User">
+                </label>
+
+                <label>
+                    Email Address
+                    <input type="email" value="admin@example.com">
+                </label>
+
+                <label>
+                    Phone Number
+                    <input type="tel" value="072 123 4567">
+                </label>
+
+                <button class="save-btn">Save Profile</button>
+            </div>
+
+            <!-- System Settings -->
+            <div class="settings-card" id = "systemsSettings">
+                <h3>System Settings</h3>
+
+                <label class="toggle">
+                    <span>Enable Email Notifications</span>
+                    <input type="checkbox" checked>
+                </label>
+
+                <label class="toggle">
+                    <span>Allow Online Bookings</span>
+                    <input type="checkbox" checked>
+                </label>
+
+                <label>
+                    Default Booking Fee (R)
+                    <input type="number" value="250">
+                </label>
+
+                <button class="save-btn">Save System Settings</button>
+            </div>
+
+            <!-- Security Settings -->
+            <div class="settings-card" id = "securitySettings">
+                <h3>Security</h3>
+
+                <label>
+                    Current Password
+                    <input type="password">
+                </label>
+
+                <label>
+                    New Password
+                    <input type="password">
+                </label>
+
+                <label>
+                    Confirm New Password
+                    <input type="password">
+                </label>
+
+                <button class="danger-btn">Update Password</button>
+            </div>
+
+        </div>
+
+    </section>
+</body>
+</html>

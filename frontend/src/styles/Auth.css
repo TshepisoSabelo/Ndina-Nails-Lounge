@@ -1,0 +1,201 @@
+/* ===== Reset & Base ===== */
+* {
+  margin: 0;
+  padding: 20px 10px 20px;
+  font-family: 'Inter', system-ui, Helvetica, sans-serif;
+  height: fit-content;
+  color: #333;
+}
+
+h2{
+    color: #333;
+    font-weight: 600;
+    margin: 0;
+    cursor: pointer;
+    margin: 0px 0px;
+    padding: 5px 5px;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(106,17,203,0.15);
+  border-radius: 20px;
+  width: fit-content;
+}
+
+/* ===== Card ===== */
+.auth-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  max-width: 350px;
+  width: 100%;
+  border-radius: 20px;
+  height: fit-content;
+  transition: transform 0.3s ease;
+  padding: 20px 10px;
+}
+
+.auth-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== Header ===== */
+
+.auth-subtitle {
+  font-size: 0.95rem;
+  color: #666;
+  text-align: center;
+  padding: 0px 0px 0px 0px;
+}
+
+/* ===== Error message ===== */
+.error-message {
+  background: #ffe0e0;
+  color: #d8000c;
+  padding: 5px 5px;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: x-small;
+  margin: 0px 0px;
+}
+
+/* ===== Form ===== */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0px 0px 0px 0px;
+  font-size: small;
+}
+
+.form-group {
+  display: flex;
+  width: 95%;
+  margin: 0 auto;
+  padding: 0px 0px 0px 0px;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  font-size: small;
+}
+
+/* Floating labels */
+.form-group input {
+  width: 95%;
+  padding: 10px 10px;
+  border-radius: 0.6rem;
+  border: 1px solid #ccc;
+  background-color: transparent;
+  transition: all 0.3s;
+  margin: 0 auto;
+  font-size: small;
+}
+
+.form-group input:focus {
+  border-color: #6a11cb;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(106,17,203,0.15);
+}
+
+/* ===== Buttons ===== */
+.auth-button {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0.7rem;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.auth-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(106,17,203,0.3);
+}
+
+.auth-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ===== Footer Links ===== */
+.auth-footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0px 0px 0px 0px;
+}
+
+.auth-footer a {
+  color: #6a11cb;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+.link-button {
+  background: none;
+  border: none;
+  color: #6a11cb;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  transition: 0.3s;
+}
+
+.link-button:hover {
+  text-decoration: underline;
+}
+
+.forgot-password {
+  color: #2575fc;
+  font-size: 0.85rem;
+  margin: 0px 0px;
+  padding: 0px 0px 0px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: 0.3s;
+}
+
+/* ===== Optional Show Password Button ===== */
+.show-password-btn {
+  margin-top: 0.2rem;
+  font-size: 0.75rem;
+  color: #6a11cb;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 500px) {
+  .auth-card {
+    padding: 2rem;
+  }
+
+  .auth-button {
+    font-size: 0.95rem;
+  }
+}

@@ -7,7 +7,18 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 import os
 
-DATABASE_URL = os.getenv( "DATABASE_URL", "mysql+pymysql://root:PC-MySQL_PassPass02@db:3306/nailsbar_db")
+# Support both Docker and local development environments
+# Compose the DB URL from environment variables when DATABASE_URL is not set
+DB_HOST = os.getenv("DB_HOST", os.getenv("HOST", "localhost"))
+DB_PORT = os.getenv("DB_PORT", "3306")
+DB_USER = os.getenv("MYSQL_USER", os.getenv("DB_USER", "root"))
+DB_PASSWORD = os.getenv("MYSQL_PASSWORD", os.getenv("DB_PASSWORD", "PC-MySQL_PassPass02"))
+DB_NAME = os.getenv("MYSQL_DATABASE", os.getenv("DB_NAME", "nailsbar_db"))
+
+DATABASE_URL = os.getenv(
+    "DATABASE_URL",
+    f"mysql+pymysql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+)
 #What database type (MySQL)
 #What driver (pymysql)
 #Username & password
@@ -24,7 +35,7 @@ engine = create_engine(DATABASE_URL)
 #(autoflush) - Flush sends pending changes to the database without commiting first
 #Everything is explicit
 #Safer for APIs
-sessionLocal = sessionmaker(
+SessionLocal = sessionmaker(
     autocommit = False,
     autoflush= False,
     bind = engine
@@ -41,8 +52,8 @@ Base = declarative_base()
 
 #To be able to create multiple sessions we need to create a get db fuction
 def get_db():
-    db = sessionLocal()
+    db = SessionLocal()
     try:
         yield db
-    finally: 
+    finally:
         db.close()

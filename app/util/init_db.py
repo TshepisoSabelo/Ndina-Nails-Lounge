@@ -1,2 +1,5 @@
-from app.database import Base, engine
-from app.models import user, bookings
+from database import Base, engine
+from models import user, bookings
+
+def create_update_tables():
+    Base.metadata.create_all(bind = engine)

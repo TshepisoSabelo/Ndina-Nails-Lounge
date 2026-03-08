@@ -9,8 +9,8 @@ The website consists of five main pages:
 -Welcomes visitors to Ndina-Nails-Lounge.
 -Showcases featured services and promotions.
 
-### About Page:
--Provides details about the nail bar, its mission, and the team.
+### Prices:
+-Provides details about the nails bar latest prices and policies.
 
 ### Services Page:
 -Displays a list of available services, including pricing and descriptions.

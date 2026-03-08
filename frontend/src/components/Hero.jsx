@@ -3,13 +3,14 @@ import '../styles/landingPage.css';
 
 function Hero() {
   return (
-    <section className="hero main-hero" id="Home">
+    <section className = "hero main-hero" id="Home">
       <h1>
         Get that beauty<br />
         feeling
       </h1>
-      <div className="btn btn_more-info">
-        <Link to="/book">Find Out More</Link>
+      <div className = "hero-btns">
+        <button className = "btn btn_more-info" onClick={() => window.location.href = '/book'}>Book Now</button>
+        <button className = "btn btn_get-prices" onClick={() => window.location.href = '/PricesPage'}>Get Prices</button>
       </div>
     </section>
   );

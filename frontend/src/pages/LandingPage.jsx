@@ -1,10 +1,8 @@
-import Nav from './Nav';
-import Footer from './Footer';
-import Main from './Main';
+import Nav from '../components/Nav';
+import Footer from '../components/Footer';
+import Main from '../components/Main';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
-import '../styles/landingPage.css';
 function LandingPage() {
     return (
         <>

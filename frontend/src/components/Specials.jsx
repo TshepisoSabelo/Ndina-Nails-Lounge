@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import '../styles/landingPage.css';
 
 function Specials() {
@@ -37,7 +38,12 @@ function Specials() {
     };
 
     return (
-        <section className="specials-section">
+        <motion.section className="specials-section"
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }}
+            >
         <div className="container">
             <h2>Specials & Discounts</h2>
             <div className="slider">
@@ -64,7 +70,7 @@ function Specials() {
                 </button>
             </div>
         </div>
-        </section>
+        </motion.section>
     );
 }
 

@@ -9,16 +9,15 @@ import os
 
 # Support both Docker and local development environments
 # Compose the DB URL from environment variables when DATABASE_URL is not set
-DB_HOST = os.getenv("DB_HOST", os.getenv("HOST", "localhost"))
+DB_HOST = os.getenv("DB_HOST", "db")
 DB_PORT = os.getenv("DB_PORT", "3306")
-DB_USER = os.getenv("MYSQL_USER", os.getenv("DB_USER", "root"))
-DB_PASSWORD = os.getenv("MYSQL_PASSWORD", os.getenv("DB_PASSWORD", "PC-MySQL_PassPass02"))
+DB_USER = os.getenv("DB_USER", "root")
+DB_PASSWORD = os.getenv("MYSQL_PASSWORD")
 DB_NAME = os.getenv("MYSQL_DATABASE", os.getenv("DB_NAME", "nailsbar_db"))
 
-DATABASE_URL = os.getenv(
-    "DATABASE_URL",
-    f"mysql+pymysql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
-)
+
+
+DATABASE_URL = f"mysql+pymysql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 #What database type (MySQL)
 #What driver (pymysql)
 #Username & password

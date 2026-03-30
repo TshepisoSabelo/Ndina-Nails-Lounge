@@ -4,13 +4,14 @@ from sqlalchemy import Column, Integer, String, Numeric, Date, Time, Enum, Forei
 
 class bookings(Base): #all model classes must extend the Base model class
     __tablename__ = "bookings" #this is the name of the table in the database
-    booking_id = Column(Integer, primary_key= True, unique=True)
-    user_id= Column(String(255), ForeignKey("user.user_id"))
+    booking_id = Column(Integer, primary_key= True, unique=True, autoincrement=True)
+    name = Column(String(255), nullable= False)
+    email = Column(String(255), unique= True, nullable = False)
+    phone = Column(String(255), nullable = False)
+    passkey = Column(String(255), nullable = False)
     service = Column(Enum("MANICURE", "PEDICURE", "BUFF&SHINE"), nullable = False)
     booking_date = Column(Date, nullable = False)
     booking_time = Column(Time, nullable = False)
-    amoutn_paid = Column(Numeric(10, 2), nullable = False)
+    amount_paid = Column(Numeric(10, 2), nullable = True, default = 0.00) #allows a pay-later system
     assigned = Column(String(255))
-    status = Column(Enum("PENDING", "IN-PROGRESS" ,"COMPLETE", "FAILED"), default="PENDING")
-
-    user = relationship("user", back_populates="bookings")
+    status = Column(Enum("PENDING","CONFIRMED", "IN-PROGRESS" ,"COMPLETE", "FAILED"), default="PENDING")

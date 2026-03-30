@@ -9,8 +9,8 @@ The website consists of five main pages:
 -Welcomes visitors to Ndina-Nails-Lounge.
 -Showcases featured services and promotions.
 
-### About Page:
--Provides details about the nail bar, its mission, and the team.
+### Prices:
+-Provides details about the nails bar latest prices and policies.
 
 ### Services Page:
 -Displays a list of available services, including pricing and descriptions.
@@ -47,7 +47,7 @@ The website consists of five main pages:
 ## Current Focus
 -The current phase of the project focuses exclusively on the front-end development of the website using HTML, CSS, and JavaScript. Special attention is given to:
   Optimizing functionality for a smooth user experience.
-  Minimizing memory usage to ensure performance efficiency on both customer and admin sides.
+  Minimizing memory usage to ensure performance efficiency on both the customer and admin sides.
 
 ## How It Works
 
@@ -63,9 +63,9 @@ The website consists of five main pages:
 -Customers receive an email confirmation for accepted bookings.
 
 ## Technologies Used
--HTML: For structuring the website content.
--CSS: For styling and layout.
--JavaScript: For implementing interactive functionality.
+-REACT: For structuring and styling the website content.
+-FASTAPI: Serves as the backend.
+-MySQL: Structured database for managing bookings.
 
 ## Contributing
 -This project is currently under development. Suggestions, feedback, or contributions are welcome. Please feel free to reach out for collaboration opportunities.
